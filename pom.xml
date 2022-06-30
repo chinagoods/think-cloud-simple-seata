@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.chinagoods.framework.thinkcloud</groupId>
+        <artifactId>think-cloud-build</artifactId>
+        <version>3.1.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.chinagoods.thinkcloud</groupId>
+    <artifactId>thinkcloud-seata</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <rversion>3.1.0-SNAPSHOT</rversion>
+    </properties>
+    <!--OWN Dependencies -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-domain</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-biz-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-manager-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-commons</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-order-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-user-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-product-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+<modules>
+    <module>thinkcloud-seata-domain</module>
+    <module>thinkcloud-seata-commons</module>
+    <module>thinkcloud-seata-biz-api</module>
+    <module>thinkcloud-seata-manager-api</module>
+    <module>thinkcloud-seata-biz-provider</module>
+    <module>thinkcloud-seata-repo</module>
+    <module>thinkcloud-seata-manager-provider</module>
+    <module>thinkcloud-seata-ctl</module>
+    <module>thinkcloud-seata-apiserver</module>
+  </modules>
+</project>

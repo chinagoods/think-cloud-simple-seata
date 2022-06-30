@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.chinagoods.thinkcloud</groupId>
+        <artifactId>thinkcloud-seata</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <groupId>com.chinagoods.thinkcloud</groupId>
+    <artifactId>thinkcloud-seata-repo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <rversion>3.0.2.RELEASE</rversion>
+    </properties>
+    <!--OWN Dependencies -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-domain</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-order-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-user-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>thinkcloud-seata-product-repo-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>thinkcloud-seata-order-repo-api</module>
+        <module>thinkcloud-seata-order-repo-provider</module>
+        <module>thinkcloud-seata-product-repo-api</module>
+        <module>thinkcloud-seata-product-repo-provider</module>
+        <module>thinkcloud-seata-user-repo-api</module>
+        <module>thinkcloud-seata-user-repo-provider</module>
+    </modules>
+</project>

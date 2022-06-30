@@ -46,6 +46,10 @@
             <artifactId>think-cloud-starter-seata</artifactId>
             <groupId>com.chinagoods.framework.thinkcloud</groupId>
         </dependency>
+        <dependency>
+            <groupId>com.chinagoods.thinkcloud</groupId>
+            <artifactId>thinkcloud-seata-user-repo-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

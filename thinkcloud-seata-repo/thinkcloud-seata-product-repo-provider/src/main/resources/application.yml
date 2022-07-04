@@ -2,7 +2,7 @@ base:
   config:
     mdb:
       hostname: 127.0.0.1
-      dbname: seata
+      dbname: seatadb
       port: 3306
       username: root
       password: 123456
@@ -50,10 +50,8 @@ seata:
     type: nacos
     # 需要和server在同一个注册中心下
     nacos:
-      namespace: a3f588d3-7be9-43d3-af7c-1e7919cf8af6
       serverAddr: 127.0.0.1:8848
       # 需要server端(registry和config)、nacos配置client端(registry和config)保持一致
-      group: SEATA_GROUP
       dataId: "seata.properties"
       username: "nacos"
       password: "nacos"
@@ -63,8 +61,6 @@ seata:
       # 需要和server端保持一致，即server在nacos中的名称，默认为seata-server
       application: seata-server
       server-addr: 127.0.0.1:8848
-      group: SEATA_GROUP
-      namespace: a3f588d3-7be9-43d3-af7c-1e7919cf8af6
       username: "nacos"
       password: "nacos"
   client:

@@ -41,9 +41,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <!--seata-->
+        <!--seata-->
         <dependency>
             <artifactId>think-cloud-starter-seata</artifactId>
             <groupId>com.chinagoods.framework.thinkcloud</groupId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.seata</groupId>
+                    <artifactId>seata-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

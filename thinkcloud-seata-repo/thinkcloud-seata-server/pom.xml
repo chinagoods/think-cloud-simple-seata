@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.chinagoods.thinkcloud</groupId>
-        <artifactId>thinkcloud-seata-repo</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <groupId>com.chinagoods.framework.thinkcloud</groupId>
+        <artifactId>think-cloud-build</artifactId>
+        <version>3.1.0.RELEASE</version>
+        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>thinkcloud-seata-server</artifactId>
+    <artifactId>seata-server</artifactId>
 
 
     <licenses>
@@ -28,7 +28,7 @@
                         <artifactId>commons-logging</artifactId>
                 </exclusion>
             </exclusions>
-            <version>1.5.0</version>
+            <version>1.5.2</version>
         </dependency>
     </dependencies>
 
@@ -40,5 +40,15 @@
         </developer>
     </developers>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.chinagoods.thinkcloud.seata.SeataApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
